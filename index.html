@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankieta</title>
+</head>
+<body>
+
+
+    <style>
+body{
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+
+}
+button{
+    transition: 0.3s ease;
+    padding: 20px 40px;
+    font-size: 20px;
+    font: Helvetica;
+    border-radius: 10px;
+    background:#c2c0a0 ;
+    cursor: pointer;
+}
+button:hover{
+
+        background:#8d8b74 ;
+}
+    </style>
+<button onclick="openRandomLink()">Przejdź do ankiety</button>
+
+
+    <script>
+        const links = [
+"link_do_formularza_1",
+  "link_do_formularza_2",
+  "link_do_formularza_3",
+  "link_do_formularza_4",
+  "link_do_formularza_5",
+  "link_do_formularza_6"
+        //tutaj lista linkow, gdzy beda gotowe
+        ]
+    function openRandomLink(){
+        const randomIndex = Math.floor(Math.random() * links.length);
+        const randomLink = links[randomIndex];
+        window.open(randomLink, "_blank");
+    }
+   
+    </script>
+</body>
+</html>
